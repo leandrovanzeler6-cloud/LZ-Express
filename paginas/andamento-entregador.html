@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Status da Entrega - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<main class="pagina-status-entrega">
+
+    <header class="cabecalho-status">
+
+        <button
+            class="voltar"
+            onclick="abrirEntregasEntregador()">
+
+            ←
+
+        </button>
+
+        <h1>
+            Status da Entrega
+            <span id="numeroEntregaAndamento">#000000</span>
+        </h1>
+
+    </header>
+
+
+    <section class="conteudo-status">
+
+        <div class="linha-tempo-status">
+
+            <div class="etapa-tempo" id="statusEtapa1">
+                <div class="ponto"></div>
+                <div class="texto-etapa">
+                    <strong>Em andamento</strong>
+                    <span>Indo até a loja para retirada</span>
+                </div>
+            </div>
+
+            <div class="etapa-tempo" id="statusEtapa2">
+                <div class="ponto"></div>
+                <div class="texto-etapa">
+                    <strong>Em rota</strong>
+                    <span>Entrega em andamento</span>
+                </div>
+            </div>
+
+            <div class="etapa-tempo" id="statusEtapa3">
+                <div class="ponto"></div>
+                <div class="texto-etapa">
+                    <strong>Entregue</strong>
+                    <span>Entrega concluída</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button
+            id="botaoAtualizarStatus"
+            class="botao-atualizar-status"
+            onclick="atualizarStatusEntrega()">
+
+            ATUALIZAR STATUS
+
+        </button>
+
+        <button
+            class="link-voltar"
+            onclick="abrirEntregasEntregador()">
+
+            ← Voltar
+
+        </button>
+
+    </section>
+
+</main>
+
+<script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+</html>

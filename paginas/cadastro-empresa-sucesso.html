@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro Concluído - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="tela-sucesso">
+
+        <!-- decoração: lâminas laranja -->
+        <div class="lamina-sucesso lamina-sucesso-1" aria-hidden="true"></div>
+        <div class="lamina-sucesso lamina-sucesso-2" aria-hidden="true"></div>
+        <div class="lamina-sucesso lamina-sucesso-3" aria-hidden="true"></div>
+
+        <img
+            src="../imagens/logo-topo-sucesso.png"
+            alt="LZ Express"
+            class="logo-topo-sucesso">
+
+        <p class="tagline-topo-sucesso">
+            ENTREGAS RÁPIDAS,<br>
+            SIMPLES E SEGURAS. <span>//</span>
+        </p>
+
+        <div class="sucesso-container">
+
+            <div class="icone-sucesso">
+                ✓
+            </div>
+
+            <h1>
+                Cadastro concluído!
+            </h1>
+
+            <p>
+                Sua empresa foi cadastrada com sucesso.<br>
+                Agora você já pode usar todos os nossos serviços.
+            </p>
+
+            <button
+                class="botao-continuar"
+                onclick="irParaInicioEmpresa()">
+
+                🏠 VOLTAR AO INÍCIO
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

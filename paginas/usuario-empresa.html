@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="pagina-usuario">
+
+        <button class="voltar" onclick="irParaInicioEmpresa()">
+            ←
+        </button>
+
+        <section class="usuario-container">
+
+            <div class="banner-logo-perfil">
+                <img src="../imagens/logo.png" alt="LZ Express">
+            </div>
+
+            <h1>Perfil</h1>
+            <p class="subtitulo-perfil">Sua informações</p>
+
+            <div class="lista-info-empresa" id="listaInfoEmpresa">
+
+                <div class="linha-info-empresa">
+                    <small>Nome da empresa</small>
+                    <strong id="infoNome">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>Categoria</small>
+                    <strong id="infoCategoria">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>WhatsApp</small>
+                    <strong id="infoWhatsapp">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>Endereço</small>
+                    <strong id="infoEndereco">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>Bairro</small>
+                    <strong id="infoBairro">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>Ponto de referência</small>
+                    <strong id="infoReferencia">---</strong>
+                </div>
+
+                <div class="linha-info-empresa">
+                    <small>Horário de funcionamento</small>
+                    <strong id="infoHorario">---</strong>
+                </div>
+
+            </div>
+
+            <div class="menu-perfil">
+
+                <button onclick="abrirDadosConta()">
+                    👤
+                    <span>Dados da conta</span>
+                    ›
+                </button>
+
+                <button onclick="alterarSenha()">
+                    🔐
+                    <span>Alterar senha</span>
+                    ›
+                </button>
+
+                <button onclick="abrirNotificacoes()">
+                    🔔
+                    <span>Notificações</span>
+                    ›
+                </button>
+
+                <button onclick="abrirSobre()">
+                    ℹ️
+                    <span>Sobre o site</span>
+                    ›
+                </button>
+
+                <button
+                    class="botao-sair"
+                    onclick="sairDaConta()">
+
+                    🚪
+                    <span>Sair da conta</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

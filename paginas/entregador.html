@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entregador - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="painel-entregador">
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho-entregador">
+
+            <div>
+                <p class="saudacao-entregador">
+                    Olá! 👋
+                </p>
+
+                <h1 id="nomeEntregadorInicio">
+                    Entregador
+                </h1>
+
+                <p class="frase-entregador">
+                    Pronto para fazer boas entregas hoje?
+                </p>
+            </div>
+
+            <button
+                class="botao-notificacao-entregador"
+                onclick="abrirNotificacoesEntregador()">
+
+                🔔
+
+            </button>
+
+        </header>
+
+
+        <!-- ÁREA PRINCIPAL -->
+
+        <section class="conteudo-entregador">
+
+
+            <!-- DISPONIBILIDADE -->
+
+            <div class="card-disponibilidade">
+
+                <div
+                    class="foto-disponibilidade"
+                    id="fotoDisponibilidade">
+
+                    👤
+
+                </div>
+
+                <div class="texto-disponibilidade">
+
+                    <strong id="textoDisponibilidade">
+                        Indisponível
+                    </strong>
+
+                    <span>
+                        Ative para receber novas entregas.
+                    </span>
+
+                </div>
+
+                <button
+                    id="botaoDisponibilidade"
+                    class="botao-disponibilidade"
+                    onclick="alternarDisponibilidade()">
+
+                    ATIVAR
+
+                </button>
+
+            </div>
+
+
+            <!-- CORRIDAS -->
+
+            <div class="card-corridas">
+
+                <div class="icone-card">
+                    🛵
+                </div>
+
+                <div>
+
+                    <span>
+                        Suas corridas hoje
+                    </span>
+
+                    <strong id="corridasHoje">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- AVALIAÇÃO -->
+
+            <button
+                class="card-avaliacao"
+                onclick="abrirAvaliacaoEntregador()">
+
+                <div class="icone-card">
+                    ⭐
+                </div>
+
+                <div class="texto-avaliacao">
+
+                    <span>
+                        Sua avaliação
+                    </span>
+
+                    <strong id="avaliacaoEntregador">
+                        5,0 ⭐
+                    </strong>
+
+                </div>
+
+                <span class="seta-card">
+                    ›
+                </span>
+
+            </button>
+
+
+            <!-- AVISO -->
+
+            <div class="aviso-entregador">
+
+                <strong>
+                    📦 Fique disponível
+                </strong>
+
+                <p>
+                    Quando você estiver disponível,
+                    poderá receber novas solicitações
+                    de entrega.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENU INFERIOR -->
+
+        <nav class="menu-inferior-entregador">
+
+            <button
+                class="menu-entregador ativo"
+                onclick="irParaInicioEntregador()">
+
+                <span>⌂</span>
+
+                <small>
+                    Início
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-entregador"
+                onclick="abrirEntregasEntregador()">
+
+                <span>🚚</span>
+
+                <small>
+                    Entregas
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-entregador"
+                onclick="abrirPerfilEntregador()">
+
+                <span>♙</span>
+
+                <small>
+                    Perfil
+                </small>
+
+            </button>
+
+        </nav>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro do Entregador - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="tela-cadastro-entregador">
+
+        <button class="voltar" onclick="voltarTipoConta()">
+            ←
+        </button>
+
+        <div class="cadastro-entregador-container">
+
+            <img
+                src="../imagens/logo.png"
+                alt="LZ Express"
+                class="logo-cadastro-entregador"
+            >
+
+            <h1>Cadastro do entregador</h1>
+
+            <p class="texto-cadastro-entregador">
+                Preencha seus dados para começar a trabalhar
+                com o LZ Express.
+            </p>
+
+
+            <!-- FOTO DO ROSTO -->
+
+            <div class="foto-entregador-area">
+
+                <div class="foto-preview" id="fotoPreview">
+                    👤
+                </div>
+
+                <label
+                    for="fotoEntregador"
+                    class="botao-foto">
+
+                    📷 Tirar / escolher foto
+
+                </label>
+
+                <input
+                    type="file"
+                    id="fotoEntregador"
+                    accept="image/*"
+                    capture="user"
+                    hidden
+                >
+
+                <small>
+                    Tire uma foto do seu rosto para seu perfil.
+                </small>
+
+            </div>
+
+
+            <!-- DADOS PESSOAIS -->
+
+            <h2 class="titulo-cadastro">
+                Dados pessoais
+            </h2>
+
+            <div class="campo">
+
+                <label for="nomeEntregador">
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeEntregador"
+                    placeholder="Digite seu nome completo"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="cpfEntregador">
+                    CPF
+                </label>
+
+                <input
+                    type="text"
+                    id="cpfEntregador"
+                    placeholder="000.000.000-00"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="emailEntregador">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="emailEntregador"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="whatsappEntregador">
+                    WhatsApp
+                </label>
+
+                <input
+                    type="tel"
+                    id="whatsappEntregador"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="nascimentoEntregador">
+                    Data de nascimento
+                </label>
+
+                <input
+                    type="date"
+                    id="nascimentoEntregador"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <h2 class="titulo-cadastro">
+                Endereço
+            </h2>
+
+
+            <div class="campo">
+
+                <label for="ruaEntregador">
+                    Rua
+                </label>
+
+                <input
+                    type="text"
+                    id="ruaEntregador"
+                    placeholder="Digite sua rua"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="numeroEntregador">
+                    Número
+                </label>
+
+                <input
+                    type="text"
+                    id="numeroEntregador"
+                    placeholder="Número"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="bairroEntregador">
+                    Bairro
+                </label>
+
+                <input
+                    type="text"
+                    id="bairroEntregador"
+                    placeholder="Digite seu bairro"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="cidadeEntregador">
+                    Cidade
+                </label>
+
+                <input
+                    type="text"
+                    id="cidadeEntregador"
+                    placeholder="Digite sua cidade"
+                    required
+                >
+
+            </div>
+
+
+            <!-- CNH -->
+
+            <h2 class="titulo-cadastro">
+                Habilitação
+            </h2>
+
+
+            <div class="opcao-cnh">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="possuiCNH"
+                        value="sim"
+                        checked
+                        onchange="mostrarDadosCNH()"
+                    >
+
+                    Tenho CNH
+                </label>
+
+
+                <label>
+                    <input
+                        type="radio"
+                        name="possuiCNH"
+                        value="nao"
+                        onchange="mostrarDadosCNH()"
+                    >
+
+                    Não tenho CNH
+                </label>
+
+            </div>
+
+
+            <div id="dadosCNH">
+
+                <div class="campo">
+
+                    <label for="numeroCNH">
+                        Número da CNH
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numeroCNH"
+                        placeholder="Digite o número da CNH"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="categoriaCNH">
+                        Categoria
+                    </label>
+
+                    <select id="categoriaCNH">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="A">
+                            A
+                        </option>
+
+                        <option value="AB">
+                            AB
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="semCNH"
+                class="aviso-sem-cnh"
+                style="display: none;">
+
+                <strong>
+                    Não possui CNH?
+                </strong>
+
+                <p>
+                    Você poderá preencher os dados
+                    complementares necessários para
+                    análise do cadastro.
+                </p>
+
+            </div>
+
+
+            <!-- MOTO -->
+
+            <h2 class="titulo-cadastro">
+                Dados da motocicleta
+            </h2>
+
+
+            <div class="campo">
+
+                <label for="placaMoto">
+                    Placa
+                </label>
+
+                <input
+                    type="text"
+                    id="placaMoto"
+                    placeholder="ABC1D23"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="marcaMoto">
+                    Marca
+                </label>
+
+                <input
+                    type="text"
+                    id="marcaMoto"
+                    placeholder="Ex.: Honda"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="modeloMoto">
+                    Modelo
+                </label>
+
+                <input
+                    type="text"
+                    id="modeloMoto"
+                    placeholder="Ex.: Bros 160"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="anoMoto">
+                    Ano
+                </label>
+
+                <input
+                    type="number"
+                    id="anoMoto"
+                    placeholder="2025"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="corMoto">
+                    Cor
+                </label>
+
+                <input
+                    type="text"
+                    id="corMoto"
+                    placeholder="Ex.: Vermelha"
+                    required
+                >
+
+            </div>
+
+
+            <p
+                id="mensagemErroEntregador"
+                class="mensagem-erro">
+            </p>
+
+
+            <button
+                type="button"
+                class="botao-cadastrar-entregador"
+                onclick="cadastrarEntregador()">
+
+                FINALIZAR CADASTRO
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

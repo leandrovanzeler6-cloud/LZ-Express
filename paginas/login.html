@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="tela-login-nova">
+
+        <button class="voltar" onclick="voltarInicio()">
+            ←
+        </button>
+
+        <p class="tagline-topo-login-esquerda">
+            <span>//</span> ENTREGAS RÁPIDAS,<br>
+            SIMPLES E SEGURAS.
+        </p>
+
+        <p class="tagline-topo-login-direita">
+            SUA ENTREGA<br>
+            MAIS PERTO<br>
+            <strong>DE VOCÊ!</strong> <span>//</span>
+        </p>
+
+        <div class="login-container">
+
+            <img
+                src="../imagens/logo-card-login.png"
+                alt="LZ Express"
+                class="logo-login-card">
+
+            <h1>
+                Bem-vindo(a) <span>de volta!</span>
+            </h1>
+
+            <p class="texto-login">
+                Faça login para acessar sua conta<br>
+                e gerenciar suas entregas.
+            </p>
+
+            <form id="formLogin">
+
+                <div class="campo-com-icone">
+                    <span class="icone-campo">👤</span>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Usuário ou e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo-com-icone">
+                    <span class="icone-campo">🔒</span>
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Senha"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="mostrar-senha-nova"
+                        onclick="mostrarSenha()">
+                        👁️
+                    </button>
+                </div>
+
+                <button type="submit" class="botao-entrar-novo">
+                    <span>→</span> <span id="textoBotaoEntrar">ENTRAR</span> <span>→</span>
+                </button>
+
+                <button type="button" class="botao-criar-conta-novo" onclick="criarConta()">
+                    👤+ CRIAR CONTA
+                </button>
+
+            </form>
+
+            <p class="rodape-login-novo">
+                — JUNTOS EM CADA ENTREGA —
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+
+</body>
+
+</html>

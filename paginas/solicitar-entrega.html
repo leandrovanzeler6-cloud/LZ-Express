@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solicitar Entrega - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="pagina-solicitar-entrega">
+
+        <header class="cabecalho-solicitar">
+
+            <button class="voltar" onclick="abrirEntregasEmpresa()">
+                ←
+            </button>
+
+            <h1>Solicitar Entrega</h1>
+
+        </header>
+
+        <section class="conteudo-solicitar">
+
+            <form id="formSolicitarEntrega">
+
+                <div class="card-solicitar">
+
+                    <div class="secao-detalhes">
+
+                        <small>RETIRADA (SUA LOJA)</small>
+
+                        <strong id="retiradaNomeLoja">---</strong>
+                        <p id="retiradaResumo">Carregando...</p>
+
+                        <div id="retiradaCompleta" class="retirada-completa" style="display: none;">
+                            <p id="retiradaReferenciaCompleta"></p>
+                            <p id="retiradaWhatsappCompleto"></p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="botao-ver-endereco"
+                            id="botaoVerEndereco"
+                            onclick="alternarEnderecoCompleto()">
+                            VER ENDEREÇO COMPLETO
+                        </button>
+
+                    </div>
+
+                    <div class="secao-detalhes secao-observacoes">
+
+                        <small>DESTINO (CLIENTE)</small>
+
+                        <div class="campo">
+                            <label for="nomeCliente">Nome do cliente</label>
+                            <input type="text" id="nomeCliente" placeholder="Nome do cliente" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="ruaDestino">Endereço</label>
+                            <input type="text" id="ruaDestino" placeholder="Rua do destino" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="numeroDestino">Número</label>
+                            <input type="text" id="numeroDestino" placeholder="Número" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="complementoDestino">Complemento</label>
+                            <input type="text" id="complementoDestino" placeholder="Casa, apartamento, sala...">
+                        </div>
+
+                        <div class="campo">
+                            <label for="bairroDestino">Bairro</label>
+                            <input type="text" id="bairroDestino" placeholder="Bairro" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="cidadeDestino">Cidade</label>
+                            <input type="text" id="cidadeDestino" placeholder="Cidade" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="referenciaDestino">Ponto de referência</label>
+                            <input type="text" id="referenciaDestino" placeholder="Ponto de referência">
+                        </div>
+
+                        <div class="campo">
+                            <label for="valorEntrega">Valor da entrega (R$)</label>
+                            <input type="number" id="valorEntrega" placeholder="Ex.: 15.00" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="observacoesEntrega">Observações (horário, etc.)</label>
+                            <textarea id="observacoesEntrega" placeholder="Alguma observação para o entregador?" rows="4"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="botao-solicitar">
+                    SOLICITAR ENTREGADOR
+                </button>
+
+                <button type="button" class="link-voltar" onclick="abrirEntregasEmpresa()">
+                    ← Voltar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

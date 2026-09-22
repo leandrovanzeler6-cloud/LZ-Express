@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entregas - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="pagina-empresa">
+
+        <button class="voltar" onclick="irParaInicioEmpresa()">
+            ←
+        </button>
+
+        <section class="pagina-conteudo">
+
+            <h1>Entregas</h1>
+
+            <button class="botao-nova-entrega" onclick="solicitarEntrega()">
+                + Solicitar nova entrega
+            </button>
+
+            <div class="abas-historico abas-entregas-empresa">
+
+                <button
+                    class="aba-historico ativa"
+                    id="abaAtivasEmpresa"
+                    onclick="filtrarEntregasEmpresa('ativas')">
+                    Ativas
+                </button>
+
+                <button
+                    class="aba-historico"
+                    id="abaConcluidasEmpresa"
+                    onclick="filtrarEntregasEmpresa('concluidas')">
+                    Concluídas
+                </button>
+
+            </div>
+
+            <div id="listaEntregasEmpresa" class="lista-entregas-empresa"></div>
+
+        </section>
+
+        <nav class="menu-inferior">
+
+            <button class="menu-item" onclick="irParaInicioEmpresa()">
+                <span>⌂</span>
+                <small>Início</small>
+            </button>
+
+            <button class="menu-item ativo">
+                <span>🚚</span>
+                <small>Entregas</small>
+            </button>
+
+            <button class="menu-item" onclick="abrirHistoricoEmpresa()">
+                <span>🕘</span>
+                <small>Histórico</small>
+            </button>
+
+            <button class="menu-item" onclick="abrirUsuarioEmpresa()">
+                <span>♙</span>
+                <small>Perfil</small>
+            </button>
+
+        </nav>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>

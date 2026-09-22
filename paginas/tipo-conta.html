@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tipo de Conta - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="tela-tipo-conta">
+
+        <button class="voltar" onclick="voltarCadastro()">
+            ←
+        </button>
+
+        <div class="tipo-container">
+
+            <img src="../imagens/logo.png"
+                 alt="LZ Express"
+                 class="logo-tipo">
+
+            <h1>Para quem é esta conta?</h1>
+
+            <p class="texto-tipo">
+                Selecione o tipo de conta que deseja utilizar.
+            </p>
+
+            <!-- EMPRESA -->
+
+            <button class="tipo-card" onclick="selecionarEmpresa()">
+
+                <div class="tipo-icone">
+                    🏪
+                </div>
+
+                <div class="tipo-texto">
+                    <strong>EMPRESA</strong>
+
+                    <span>
+                        Para cadastrar minha empresa
+                        e solicitar entregas.
+                    </span>
+                </div>
+
+                <div class="tipo-seta">
+                    ›
+                </div>
+
+            </button>
+
+
+            <!-- ENTREGADOR -->
+
+            <button class="tipo-card" onclick="selecionarEntregador()">
+
+                <div class="tipo-icone">
+                    🛵
+                </div>
+
+                <div class="tipo-texto">
+                    <strong>ENTREGADOR</strong>
+
+                    <span>
+                        Para realizar entregas
+                        e trabalhar como motoboy.
+                    </span>
+                </div>
+
+                <div class="tipo-seta">
+                    ›
+                </div>
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+
+</body>
+
+</html>

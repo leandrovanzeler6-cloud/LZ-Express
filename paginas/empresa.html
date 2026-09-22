@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel da Empresa - LZ Express</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="painel-empresa">
+
+        <!-- CABEÇALHO -->
+        <header class="cabecalho-empresa">
+
+            <div>
+                <p class="saudacao">Olá! 👋</p>
+
+                <h1>Sua gestão começa aqui.</h1>
+            </div>
+
+            <button class="botao-notificacao" onclick="abrirNotificacoes()">
+                🔔
+            </button>
+
+        </header>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="conteudo-empresa">
+
+            <!-- CADASTRAR EMPRESA (só aparece se ainda não cadastrou) -->
+            <div class="card-cadastro-empresa" id="cardCadastrarEmpresa">
+
+                <div class="icone-cadastro">
+                    🏪
+                </div>
+
+                <div class="texto-card">
+
+                    <h2>Cadastre sua empresa</h2>
+
+                    <p>
+                        Cadastre os dados da sua empresa
+                        para começar a solicitar entregas.
+                    </p>
+
+                </div>
+
+                <button
+                    class="botao-cadastrar-empresa"
+                    onclick="cadastrarEmpresa()">
+
+                    CADASTRAR MINHA EMPRESA
+
+                </button>
+
+            </div>
+
+
+            <!-- MENU PRINCIPAL (só aparece se já cadastrou) -->
+            <div
+                class="menu-empresa-registrada"
+                id="menuEmpresaRegistrada"
+                style="display: none;">
+
+                <div class="banner-logo-empresa">
+                    <img src="../imagens/logo.png" alt="LZ Express">
+                </div>
+
+                <div class="lista-menu-empresa">
+
+                    <button class="item-menu-empresa" onclick="abrirUsuarioEmpresa()">
+                        <span class="icone-item-menu">🏪</span>
+                        <div>
+                            <strong>Minha Empresa</strong>
+                            <small>Gerencie sua loja</small>
+                        </div>
+                        <b>›</b>
+                    </button>
+
+                    <button class="item-menu-empresa" onclick="solicitarEntrega()">
+                        <span class="icone-item-menu">✉️</span>
+                        <div>
+                            <strong>Solicitar Entrega</strong>
+                            <small>Peça uma entrega</small>
+                        </div>
+                        <b>›</b>
+                    </button>
+
+                    <button class="item-menu-empresa" onclick="abrirEntregasEmpresa()">
+                        <span class="icone-item-menu">🚚</span>
+                        <div>
+                            <strong>Entregas</strong>
+                            <small>Acompanhe suas entregas</small>
+                        </div>
+                        <b>›</b>
+                    </button>
+
+                    <button class="item-menu-empresa" onclick="abrirUsuarioEmpresa()">
+                        <span class="icone-item-menu">👤</span>
+                        <div>
+                            <strong>Perfil</strong>
+                            <small>Suas informações e mais</small>
+                        </div>
+                        <b>›</b>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENU INFERIOR -->
+        <nav class="menu-inferior">
+
+            <button
+                class="menu-item ativo"
+                onclick="irParaInicioEmpresa()">
+
+                <span>⌂</span>
+                <small>Início</small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="abrirEntregasEmpresa()">
+
+                <span>🚚</span>
+                <small>Entregas</small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="abrirHistoricoEmpresa()">
+
+                <span>🕘</span>
+                <small>Histórico</small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="abrirUsuarioEmpresa()">
+
+                <span>♙</span>
+                <small>Perfil</small>
+
+            </button>
+
+        </nav>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="../js/firebase-auth.js"></script>
+    <script type="module" src="../js/firebase-dados.js"></script>
+
+</body>
+
+</html>
